@@ -35,7 +35,7 @@ O jogo de badminton em realidade virtual proporcionará aos jogadores uma experi
 ## Stack de Tecnologia
 <ul>
   <li>Blender 3.5.1: Será utilizado o software Blender para a modelagem 3D dos elementos do jogo, garantindo uma qualidade visual excelente.</li>
-  <li>Unity 3.4.x: O jogo será desenvolvido utilizando o Unity como game engine, aproveitando suas ferramentas e recursos para a criação do ambiente virtual e a programação das mecânicas do jogo.</li>
+  <li>Unity 2021.3.25f1: O jogo será desenvolvido utilizando o Unity como game engine, aproveitando suas ferramentas e recursos para a criação do ambiente virtual e a programação das mecânicas do jogo.</li>
   <li>Oculus Quest 2: A plataforma de realidade virtual na qual o jogo será desenvolvido</li>
 </ul>
 
