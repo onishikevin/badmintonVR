@@ -38,3 +38,11 @@ O jogo de badminton em realidade virtual proporcionará aos jogadores uma experi
   <li>Unity 3.4.x: O jogo será desenvolvido utilizando o Unity como game engine, aproveitando suas ferramentas e recursos para a criação do ambiente virtual e a programação das mecânicas do jogo.</li>
   <li>Oculus Quest 2: A plataforma de realidade virtual na qual o jogo será desenvolvido</li>
 </ul>
+
+## Planejamento
+<ol>
+  <li>23/05 - 06/06: [BLENDER] Modelagem de assets</li>
+  <li>06/06 - 13/06: [UNITY] Montagem da cena e configuração de realidade virtual</li>
+  <li>13/06 - 27/06: [UNITY] Desenvolvimento da lógica de jogo</li>
+  <li>27/06 - 04/07: Documentação e preparo para apresentação</li>
+</ol>
