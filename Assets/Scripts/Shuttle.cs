@@ -1,15 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Serialization;
 using UnityEngine;
 
 public class Shuttle : MonoBehaviour
 {
     [SerializeField]
-    private float _animationDuration = 0.2f;
+    private bool _faceTravellingDirection = true;
+
     private Rigidbody _rigidbody;
 
-    // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -17,7 +14,7 @@ public class Shuttle : MonoBehaviour
 
     private void Update()
     {
-        if (_rigidbody.velocity.magnitude > 0f)
+        if (_rigidbody.velocity.magnitude > 0f && _faceTravellingDirection)
         {
             transform.rotation = Quaternion.LookRotation(_rigidbody.velocity) * Quaternion.Euler(-90, 0, 0);
         }
@@ -25,25 +22,40 @@ public class Shuttle : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Racket")
+        switch (collision.collider.tag)
         {
-            _rigidbody.velocity = Vector3.zero;
-            _rigidbody.AddForce(collision.impulse.normalized * 550f);
-            //StartCoroutine(ChangeFlightDirection());
+            case "Racket":
+                {
+                    _rigidbody.velocity = Vector3.zero;
+                    _rigidbody.AddForce(collision.impulse.normalized * 550f);
+                    break;
+                }
+            case "ServeZoneRight":
+                {
+                    // Add points to Player
+                    break;
+                }
+            case "ServeZoneLeft":
+                {
+                    // Add points to Player
+                    break;
+                }
+            case "PlayZone":
+                {
+                    // Add points to Player
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
         }
     }
 
-    private IEnumerator ChangeFlightDirection()
+    public void SetFaceTravellingDirection(bool active)
     {
-        float time = 0f;
-        Quaternion originalRotation = transform.rotation;
-        Quaternion rot180degrees = Quaternion.Euler(-originalRotation.eulerAngles);
-
-        while (time < _animationDuration)
-        {
-            transform.rotation = Quaternion.Lerp(originalRotation, rot180degrees, time / _animationDuration);
-            time += Time.deltaTime;
-            yield return null;
-        }
+        transform.rotation = Quaternion.identity;
+        _faceTravellingDirection = active;
     }
+
 }
