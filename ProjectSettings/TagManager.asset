@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Racket
+  - ServeZoneRight
+  - ServeZoneLeft
+  - PlayZone
+  - Floor
+  - Shuttle
   layers:
   - Default
   - TransparentFX

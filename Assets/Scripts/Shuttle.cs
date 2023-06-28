@@ -32,8 +32,7 @@ public class Shuttle : MonoBehaviour
                 }
             case "ServeZoneRight":
                 {
-                    // Add points to Player
-                    break;
+                     break;
                 }
             case "ServeZoneLeft":
                 {
@@ -43,6 +42,11 @@ public class Shuttle : MonoBehaviour
             case "PlayZone":
                 {
                     // Add points to Player
+                    break;
+                }
+            case "Floor":
+                {
+                    Destroy(gameObject, 2f);
                     break;
                 }
             default:
