@@ -291,8 +291,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4560778687960825363}
   - component: {fileID: 4089723041876285688}
-  - component: {fileID: 4089723041876285689}
   - component: {fileID: 4089723041876285690}
+  - component: {fileID: 6068683085345268605}
   m_Layer: 0
   m_Name: Shuttle
   m_TagString: Shuttle
@@ -331,7 +331,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3747263866084779177}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0.75
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -339,20 +339,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 2
---- !u!136 &4089723041876285689
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3747263866084779177}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.026347086
-  m_Height: 0.14812917
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.07194239, z: 0}
 --- !u!114 &4089723041876285690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +352,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _faceTravellingDirection: 1
+  _racketImpulseMultiplier: 35
+--- !u!135 &6068683085345268605
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3747263866084779177}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.028656559
+  m_Center: {x: 0.0014562607, y: 0.026200106, z: 7.17632e-17}
 --- !u!1 &4778445618683466215
 GameObject:
   m_ObjectHideFlags: 0

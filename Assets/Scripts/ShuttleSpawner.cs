@@ -6,6 +6,8 @@ public class ShuttleSpawner : MonoBehaviour
 {
     [SerializeField]
     private GameObject _shuttle;
+    [SerializeField]
+    private float _timeBetweenSpawns = 8f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,7 @@ public class ShuttleSpawner : MonoBehaviour
         {
             GameObject newShuttle = Instantiate(_shuttle, transform.position, Quaternion.identity);
             newShuttle.GetComponent<Rigidbody>().velocity = new Vector3(8f, 8f, 0f);
-            yield return new WaitForSeconds(8f);
+            yield return new WaitForSeconds(_timeBetweenSpawns);
         }
     }
 }

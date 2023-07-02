@@ -4,7 +4,9 @@ public class Shuttle : MonoBehaviour
 {
     [SerializeField]
     private bool _faceTravellingDirection = true;
-
+    [SerializeField]
+    private float _racketImpulseMultiplier = 35f;
+    
     private Rigidbody _rigidbody;
 
     void Start()
@@ -27,7 +29,7 @@ public class Shuttle : MonoBehaviour
             case "Racket":
                 {
                     _rigidbody.velocity = Vector3.zero;
-                    _rigidbody.AddForce(collision.impulse.normalized * 550f);
+                    _rigidbody.AddForce(collision.impulse * _racketImpulseMultiplier);
                     break;
                 }
             case "ServeZoneRight":
@@ -58,7 +60,7 @@ public class Shuttle : MonoBehaviour
 
     public void SetFaceTravellingDirection(bool active)
     {
-        transform.rotation = Quaternion.identity;
+        _rigidbody.rotation = Quaternion.identity;
         _faceTravellingDirection = active;
     }
 
