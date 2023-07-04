@@ -6,6 +6,16 @@ Este projeto tem como objetivo desenvolver um jogo de realidade virtual de badmi
 
 O jogo de badminton em realidade virtual proporcionará aos jogadores uma experiência envolvente e realista, simulando as regras e a emoção desse esporte popular. Os jogadores terão a oportunidade de sentir como é estar em uma quadra profissional de badminton.
 
+## Como instalar e iniciar o jogo
+
+Não conseguimos adicionar o programa executável ao repositório do programa devido ao limite de tamanho de transferência, deixamos o aplicativo disponível para download neste [link do google drive](https://drive.google.com/file/d/1zz-UgEj7ag6KgXvr7tWCv1Zvex3U-CZC/view?usp=sharing). Compatível apenas com Windows (64 bits).
+ 
+Assumindo que o headset de realidade virtual já esteja configurado, conectado à sua máquina e esteja pronto para uso, basta seguir os seguintes passos para executar o programa:
+
+1. Baixe o arquivo compactado **Badminton.zip** no link acima;
+2. Descompacte o arquivo, obtendo a pasta do programa;
+3. Abra a pasta, selecione o arquivo executável **Badminton.exe** e execute-o.
+
 ## Requisitos
 ### Plataforma: 
 <ul>
